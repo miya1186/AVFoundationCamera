@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVFoundationCamra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBa-De-Orn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-bD-yal">
+                                        <rect key="frame" x="164.5" y="768.5" width="85" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="8sl-Ip-aOi"/>
+                                            <constraint firstAttribute="height" constant="68" id="yvw-Zc-fVi"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" backgroundImage="circle.dashed.inset.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0M-7i-SlK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qeF-bD-yal" firstAttribute="centerX" secondItem="eBa-De-Orn" secondAttribute="centerX" id="pKg-Zp-yZP"/>
+                                    <constraint firstAttribute="bottom" secondItem="qeF-bD-yal" secondAttribute="bottom" constant="60" id="qS2-HK-TNl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eBa-De-Orn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HxG-HG-4Pw"/>
+                            <constraint firstItem="eBa-De-Orn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MM9-EJ-rjm"/>
+                            <constraint firstItem="eBa-De-Orn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N31-Zo-JL9"/>
+                            <constraint firstAttribute="bottom" secondItem="eBa-De-Orn" secondAttribute="bottom" id="psk-C4-ml7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="eBa-De-Orn" id="yrb-oK-cTE"/>
+                        <outlet property="shutterButton" destination="qeF-bD-yal" id="K7Y-Uj-g8r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle.dashed.inset.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
